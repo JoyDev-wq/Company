@@ -1,4 +1,3 @@
-import React from "react";
 import data from "../data";
 
 const Resume = () => {
@@ -20,6 +19,7 @@ const Resume = () => {
             And Your <br /> Resume Shouldn't Look Like One
           </h1>
         </div>
+
 
         <div className=" flex gap-[1rem] flex-wrap justify-center">
           {data.map((item, i) => (

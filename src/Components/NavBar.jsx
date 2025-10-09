@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "../assets/logo.png";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
@@ -9,36 +9,31 @@ const NavBar = () => {
   const mobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
   };
+
   const handleOverlayClick = (e) => {
-    // If user clicks directly on overlay (not on menu)
     if (e.target.id === "menu-overlay") {
       setShowMobileMenu(false);
     }
   };
 
   return (
-    <div
-      className={`fixed top-0 left-0 right-0 bg-white p-4 flex justify-around items-center h-[80px] shadow-md z-50`}
-    >
+    <div className={`fixed top-0 left-0 right-0 bg-white p-4 flex max-[400px]:justify-between justify-around items-center h-[80px] shadow-md z-50`}>
       <div className="flex items-center gap-3 ">
-        <img className="h-[60px] " src={logo} alt="" />
-        <div className="mt-[0.5rem]">
-          <p className="uppercase font-medium text-[24.5px] leading-2">
+        <img className="max-[400px]:h-[40px] h-[60px] " src={logo} alt="" />
+        <div className="mt-[0.5rem] ">
+          <p className="uppercase font-medium max-[400px]:text-[20px] text-[24.5px] leading-2">
             Company
           </p>
-          <p className="text-lg font-light">business tagline</p>
+          <p className="max-[400px]:text-[14px] text-lg font-light">business tagline</p>
         </div>
       </div>
       <div className="">
+
         {/* Large Menu */}
         <ul className="hidden lg:flex gap-[2.5rem] font-medium relative">
           <li className="hover:cursor-pointer hover:text-[#FA1239]">Home</li>
-          <li className="hover:cursor-pointer hover:text-[#FA1239]">
-            About Us
-          </li>
-          <li className="hover:cursor-pointer hover:text-[#FA1239]">
-            Our Services
-          </li>
+          <li className="hover:cursor-pointer hover:text-[#FA1239]">About Us</li>
+          <li className="hover:cursor-pointer hover:text-[#FA1239]">Our Services</li>
           <li className="hover:cursor-pointer hover:text-[#FA1239]">Pricing</li>
           <li className="hover:cursor-pointer hover:text-[#FA1239]">FAQ</li>
         </ul>
@@ -49,11 +44,12 @@ const NavBar = () => {
           src={menu}
           alt=""
         />
+
         {/* Mobile Menu */}
         {showMobileMenu && (
           <div
             id="menu-overlay"
-            className="fixed inset-0 bg-black/40 bg-opacity-50 z-40"
+            className="fixed inset-0 bg-black/70 bg-opacity-50 z-40"
             onClick={handleOverlayClick}
           >
             <div className="absolute bg-[#FFE3E8] top-0 right-0 h-screen w-[20rem] p-[1rem] z-50 shadow-lg transition-transform duration-300 ease-in-out">
@@ -86,9 +82,9 @@ const NavBar = () => {
                     {" "}
                     <path
                       d="M6.5 20V11H3L12 5L21 11H17.5V20H14.5V16.5C14.5 15.6716 13.8284 15 13 15H11C10.1716 15 9.5 15.6716 9.5 16.5V20H6.5Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />{" "}
                   </svg>{" "}
                   Home

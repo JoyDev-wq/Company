@@ -7,7 +7,7 @@ import resume from "../assets/Frame2.png";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex max-sm:h-[120vh] sm:h-[125vh] lg:h-screen flex-col lg:flex-row">
+    <div className="relative flex max-[400px]:h-[120vh] sm:h-[130vh] lg:h-screen flex-col lg:flex-row">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
         style={{ backgroundImage: `url(${bg_2})` }} //mobile
@@ -48,23 +48,23 @@ const HeroSection = () => {
         />
         <img
           src={resume}
-          className="absolute z-3  bottom-[2rem] right-[3rem]      /* mobile */
-            sm:bottom-[3rem] sm:right-[8rem] /* small screens */
-            md:bottom-[3.5rem] md:right-[14rem] /* medium screens */
-            lg:bottom-[3rem] lg:right-[3rem] /* large screens */
-            xl:bottom-[4rem] xl:right-[4rem]   /* extra-large screens */
+          className="absolute z-3  bottom-[2rem] right-[3rem]     
+            sm:bottom-[3rem] sm:right-[8rem] 
+            md:bottom-[3.5rem] md:right-[14rem] 
+            lg:bottom-[3rem] lg:right-[3rem] 
+            xl:bottom-[4rem] xl:right-[4rem]   
             2xl:bottom-[4rem] 2xl:right-[8rem] 
             w-[8rem] sm:w-[12rem] xl:w-[16rem]"
         />
         <img
           src={review}
-          className="absolute z-3 bottom-[7rem] right-[13rem]    /* mobile */
-      sm:bottom-[11rem] sm:right-[22rem] /* small screens */
-      md:bottom-[11rem] md:right-[29rem] /* medium screens */
-      lg:bottom-[18rem] lg:right-[16rem] /* large screens */
-      xl:bottom-[18rem] xl:right-[20rem] /* extra-large screens */
-      2xl:bottom-[16rem] 2xl:right-[28rem] 
-      w-[10rem] sm:w-[15rem] xl:w-[20rem]"
+          className="absolute z-3 bottom-[7rem] right-[13rem]   
+            sm:bottom-[11rem] sm:right-[22rem] 
+            md:bottom-[11rem] md:right-[29rem] 
+            lg:bottom-[18rem] lg:right-[16rem] 
+            xl:bottom-[18rem] xl:right-[20rem] 
+            2xl:bottom-[16rem] 2xl:right-[28rem] 
+            w-[10rem] sm:w-[15rem] xl:w-[20rem]"
         />
       </div>
     </div>
