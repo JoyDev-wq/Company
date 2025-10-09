@@ -17,7 +17,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className={`fixed top-0 left-0 right-0 bg-white p-4 flex max-[400px]:justify-between justify-around items-center h-[80px] shadow-md z-50`}>
+    <div className={`fixed top-0 left-0 right-0 bg-white p-4 flex justify-between  sm:justify-around items-center h-[80px] shadow-md z-50`}>
+
       <div className="flex items-center gap-3 ">
         <img className="max-[400px]:h-[40px] h-[60px] " src={logo} alt="" />
         <div className="mt-[0.5rem] ">

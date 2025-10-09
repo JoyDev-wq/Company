@@ -4,23 +4,31 @@ import bg_1 from "../assets/bg-land.png";
 import bg_2 from "../assets/bg-mobile.png";
 import review from "../assets/Frame.png";
 import resume from "../assets/Frame2.png";
+import underline from "../assets/underline.png";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex max-[400px]:h-[120vh] sm:h-[130vh] lg:h-screen flex-col lg:flex-row">
+    <div className="relative flex  max-[390px]:h-[clamp[125vh,130vh,150vh]] sm:h-[clamp[100vh,110vh,115vh]] lg:h-[110vh] xl:h-screen flex-col lg:flex-row">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
-        style={{ backgroundImage: `url(${bg_2})` }} //mobile
+        style={{ backgroundImage: `url(${bg_2})` }} //mobile background
       ></div>
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
-        style={{ backgroundImage: `url(${bg_1})` }} //desktop
+        style={{ backgroundImage: `url(${bg_1})` }} //desktop background
       ></div>
-      <div className=" flex flex-1 justify-center mt-[50px] lg:ml-[50px] xl:ml-[100px] flex-col gap-[20px] sm:gap-[38px] z-20">
-        <div className="text-center lg:text-left mt-[3rem] lg:mt-[5rem] text-4xl lg:text-7xl font-bold leading-[3rem] lg:leading-[5.5rem]">
+      <div className=" flex lg:flex-1 justify-center mt-[3rem] lg:mt-0 lg:ml-[50px] xl:ml-[100px] flex-col gap-[20px] sm:gap-[38px] z-20">
+        <div className="text-center lg:text-left mt-[3rem] lg:mt-[5rem] text-4xl md:text-5xl xl:text-7xl font-bold leading-[3rem] lg:leading-[5.5rem]">
           Your Resume <br />{" "}
-          <span className="text-[#FA1239]">Deserves A Yes</span> Let's <br />{" "}
-          Make It Happen
+          <span className="text-[#FA1239] relative">
+            Deserves A Yes{" "}
+            <img
+              src={underline}
+              className="hidden w-[26vw] lg:block lg:absolute left-0 top-[2.2rem] lg:top-[3rem] md:top-[4rem] xl:top-[5rem]"
+              alt=""
+            />
+          </span>{" "}
+          Let's <br /> Make It Happen
         </div>
         <div className="mx-auto lg:mx-0  w-[80%] sm:w-2/3 lg:w-2/3 ">
           <p className="leading-[34px] text-[16px] text-center lg:text-left">
@@ -40,7 +48,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-end flex-1">
+      <div className="flex justify-center items-end md:flex-1">
         <img
           className="h-[400px] sm:h-[600px] lg:h-[850px] relative mb-[1rem]"
           src={bg_girl}
