@@ -24,7 +24,7 @@ const HeroSection = () => {
             Deserves A Yes{" "}
             <img
               src={underline}
-              className="hidden w-[26vw] lg:block lg:absolute left-0 top-[2.2rem] lg:top-[3rem] md:top-[4rem] xl:top-[5rem]"
+              className="hidden w-[20vw] lg:block lg:absolute left-0 top-[2.2rem] lg:top-[3rem] md:top-[4rem] xl:top-[5rem]"
               alt=""
             />
           </span>{" "}
@@ -56,7 +56,7 @@ const HeroSection = () => {
         />
         <img
           src={resume}
-          className="absolute z-3  bottom-[2rem] right-[3rem]     
+          className="absolute z-3 bottom-[2rem] right-[3rem]     
             sm:bottom-[3rem] sm:right-[8rem] 
             md:bottom-[3.5rem] md:right-[14rem] 
             lg:bottom-[3rem] lg:right-[3rem] 
