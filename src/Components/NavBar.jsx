@@ -2,6 +2,8 @@ import { useState } from "react";
 import logo from "../assets/logo.png";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
+import group from "../assets/company.png";
+import group_lg from "../assets/company-large.png"
 
 const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -17,30 +19,35 @@ const NavBar = () => {
   };
 
   return (
-    <div className={`fixed top-0 left-0 right-0 bg-white p-4 flex justify-between  sm:justify-around items-center h-[80px] shadow-md z-50`}>
-
-      <div className="flex items-center gap-3 ">
+    <div
+      className={`fixed top-0 left-0 right-0 bg-white py-[10px] px-[10px] sm:py-4 sm:p-[4rem] flex justify-between items-center sm:h-[80px] shadow-md z-50`}
+    >
+      <div className="flex items-center gap-[2px] sm:gap-[11px] ">
         <img className="max-[400px]:h-[40px] h-[60px] " src={logo} alt="" />
         <div className="mt-[0.5rem] ">
-          <p className="uppercase font-medium max-[400px]:text-[20px] text-[24.5px] leading-2">
-            Company
+          <img className="sm:hidden" src={group} alt="" />
+          <img className="hidden sm:flex" src={group_lg} alt="" />
+          <p className="text-[11px] sm:text-[20px] font-light">
+            business tagline
           </p>
-          <p className="max-[400px]:text-[14px] text-lg font-light">business tagline</p>
         </div>
       </div>
       <div className="">
-
         {/* Large Menu */}
-        <ul className="hidden lg:flex gap-[2.5rem] font-medium relative">
+        <ul className="hidden lg:flex gap-[24px] font-medium relative">
           <li className="hover:cursor-pointer hover:text-[#FA1239]">Home</li>
-          <li className="hover:cursor-pointer hover:text-[#FA1239]">About Us</li>
-          <li className="hover:cursor-pointer hover:text-[#FA1239]">Our Services</li>
+          <li className="hover:cursor-pointer hover:text-[#FA1239]">
+            About Us
+          </li>
+          <li className="hover:cursor-pointer hover:text-[#FA1239]">
+            Our Services
+          </li>
           <li className="hover:cursor-pointer hover:text-[#FA1239]">Pricing</li>
           <li className="hover:cursor-pointer hover:text-[#FA1239]">FAQ</li>
         </ul>
 
         <img
-          className="h-[2rem] lg:hidden cursor-pointer"
+          className="h-[1.5rem] sm:h-[2rem] lg:hidden cursor-pointer"
           onClick={() => mobileMenu()}
           src={menu}
           alt=""
@@ -58,10 +65,8 @@ const NavBar = () => {
                 <div className="flex items-center gap-1">
                   <img className="h-[45px]" src={logo} alt="logo" />
                   <div>
-                    <p className="uppercase font-medium text-xl leading-5">
-                      Company
-                    </p>
-                    <p className="text-sm">business tagline</p>
+                    <img src={group} alt="" />
+                    <p className="text-[11px]">business tagline</p>
                   </div>
                 </div>
                 <img
@@ -98,12 +103,7 @@ const NavBar = () => {
                     className="w-[2rem] h-[2rem] fill-current"
                   >
                     <title>about-filled</title>{" "}
-                    <g
-                      id="Page-1"
-                      stroke="none"
-                      fill="none"
-                      fill-rule="evenodd"
-                    >
+                    <g id="Page-1" stroke="none" fill="none" fillRule="evenodd">
                       {" "}
                       <g
                         id="drop"
@@ -202,6 +202,9 @@ const NavBar = () => {
                                  {" "}
                   </svg>
                   FAQ
+                </li>
+                <li className="hover:cursor-pointer text-white uppercase text-center rounded-full px-[22px] py-[14px] bg-[#FA1239] list-none">
+                  Contact us{" "}
                 </li>
               </div>
             </div>

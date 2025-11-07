@@ -12,7 +12,7 @@ const data =[
     {
         img:cover_letter,
         heading:"A Cover Letter Style That Stands Out Strong",
-        para:"Stands out with a cover letter that speaks directly to the role and reflects your strengths."
+        para:"Stand out with a cover letter that speaks directly to the role and reflects your strengths."
     },
     {
         img:profile,
