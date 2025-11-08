@@ -2,7 +2,7 @@ import data from "../data";
 
 const Resume = () => {
   return (
-    <div className=" pt-[40px] z-30 ">
+    <div className=" py-[40px] z-30 ">
       <div className="flex flex-col gap-[50px]">
         <div className="text-center flex flex-col gap-[26px]">
           <div className="flex justify-center">
